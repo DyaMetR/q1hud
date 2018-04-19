@@ -1,5 +1,5 @@
 # Quake 1 HUD
-###A HUD replacement for Garry's Mod###
+### A HUD replacement for Garry's Mod
 
 ## Index
 +   [Features](#features)

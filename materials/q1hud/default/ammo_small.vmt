@@ -1,0 +1,5 @@
+"UnlitGeneric"
+{
+   "$basetexture" "q1hud/default/ammo_small"
+   "$alphatest" "1"
+}

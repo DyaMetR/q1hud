@@ -1,0 +1,6 @@
+"UnlitGeneric"
+{
+   "$basetexture" "q1hud/default/weapons"
+   "$alphatest" "1"
+   "$vertexalpha" "1"
+}

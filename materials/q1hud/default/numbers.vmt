@@ -1,0 +1,5 @@
+"UnlitGeneric"
+{
+   "$basetexture" "q1hud/default/numbers"
+   "$alphatest" "1"
+}

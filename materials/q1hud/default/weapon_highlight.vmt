@@ -1,0 +1,7 @@
+"UnlitGeneric"
+{
+   "$basetexture" "q1hud/default/weapon_highlight"
+   "$vertexalpha" "1"
+   "$vertexcolor" "1"
+   "$additive" "1"
+}

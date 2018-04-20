@@ -4,8 +4,6 @@
 
 if CLIENT then
 
-  Q1HUD.LastBufferedTexture = nil;
-
   --[[
     Adds a texture for a skin data table
     @param {table} data
@@ -81,10 +79,7 @@ if CLIENT then
     local path, u, v = file.path, file.u, file.v;
 
     surface.SetDrawColor(Color(color.r, color.g, color.b, alpha));
-    if (self.LastBufferedTexture != path or forcePreload) then
-      surface.SetTexture(surface.GetTextureID(path));
-      self.LastBufferedTexture = path;
-    end
+    surface.SetTexture(path);
     surface.DrawTexturedRectUV(x, y, w * scale, h * scale, (a/u), (b/v), (a + w)/u, (b + h)/v);
   end
 

@@ -179,7 +179,6 @@ if CLIENT then
       else
         surface.SetTexture(surface.GetTextureID(texture.path));
       end
-      Q1HUD.LastBufferedTexture = nil; -- Reset the default texture buffer
       surface.SetDrawColor(Color(255, 255, 255));
       surface.DrawTexturedRect(x, y, w * scale, h * scale);
     else
@@ -213,7 +212,6 @@ if CLIENT then
       else
         surface.SetTexture(surface.GetTextureID(texture.path));
       end
-      Q1HUD.LastBufferedTexture = nil; -- Reset the default texture buffer
       surface.SetDrawColor(Color(255, 255, 255));
       surface.DrawTexturedRect(x, y, w * scale, h * scale);
     else

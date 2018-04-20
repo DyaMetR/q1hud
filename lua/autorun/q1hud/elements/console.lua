@@ -29,7 +29,7 @@ if CLIENT then
     -- Draw background
     local file = self:GetTexture(TEXTURE).file;
     surface.SetDrawColor(Color(255, 255, 255));
-    surface.SetMaterial(Material(file.path..".png"));
+    surface.SetMaterial(file.path);
     surface.DrawTexturedRect(0, ScrH() * (-displacement), ScrW(), ScrH());
 
     -- Text data

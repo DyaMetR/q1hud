@@ -21,20 +21,20 @@ if CLIENT then
   local skin = "Default"; -- Skin name
 
   -- Files required
-  local numbers = {path = "q1hud/default/numbers", u = 512, v = 64};
-  local backtile = {path = "q1hud/default/backtile", u = 64, v = 64};
-  local statusbar = {path = "q1hud/default/statusbar", u = 512, v = 64};
-  local faces = {path = "q1hud/default/faces", u = 512, v = 32};
-  local armors = {path = "q1hud/default/armors", u = 128, v = 32};
-  local runes = {path = "q1hud/default/runes", u = 32, v = 16};
-  local inventory = {path = "q1hud/default/inventory", u = 512, v = 32};
-  local small_numbers = {path = "q1hud/default/small_numbers", u = 128, v = 32};
-  local characters = {path = "q1hud/default/characters", u = 128, v = 64};
-  local weapon_highlight = {path = "q1hud/default/weapon_highlight", u = 128, v = 16};
-  local console = {path = "q1hud/default/console", u = 640, v = 400};
-  local smallAmmo = {path = "q1hud/default/ammo_small", u = 128, v = 8};
-  local ammo = {path = "q1hud/default/ammo", u = 256, v = 64};
-  local weapons = {path = "q1hud/default/weapons", u = 256, v = 64};
+  local numbers = {path = surface.GetTextureID("q1hud/default/numbers"), u = 512, v = 64};
+  local backtile = {path = surface.GetTextureID("q1hud/default/backtile"), u = 64, v = 64};
+  local statusbar = {path = surface.GetTextureID("q1hud/default/statusbar"), u = 512, v = 64};
+  local faces = {path = surface.GetTextureID("q1hud/default/faces"), u = 512, v = 32};
+  local armors = {path = surface.GetTextureID("q1hud/default/armors"), u = 128, v = 32};
+  local runes = {path = surface.GetTextureID("q1hud/default/runes"), u = 32, v = 16};
+  local inventory = {path = surface.GetTextureID("q1hud/default/inventory"), u = 512, v = 32};
+  local small_numbers = {path = surface.GetTextureID("q1hud/default/small_numbers"), u = 128, v = 32};
+  local characters = {path = surface.GetTextureID("q1hud/default/characters"), u = 128, v = 64};
+  local weapon_highlight = {path = surface.GetTextureID("q1hud/default/weapon_highlight"), u = 128, v = 16};
+  local console = {path = Material("q1hud/default/console.png"), u = 640, v = 400};
+  local smallAmmo = {path = surface.GetTextureID("q1hud/default/ammo_small"), u = 128, v = 8};
+  local ammo = {path = surface.GetTextureID("q1hud/default/ammo"), u = 256, v = 64};
+  local weapons = {path = surface.GetTextureID("q1hud/default/weapons"), u = 256, v = 64};
 
   -- Texture data
   local data = {}; -- Data table

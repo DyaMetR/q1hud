@@ -1,15 +1,15 @@
 --[[------------
     Q U A K E
 Heads Up Display
-  Version 1.0.0
-    19/04/18
+  Version 1.0.1
+    20/04/18
 
 By DyaMetR
 ]]--------------
 
 -- Main framework table
 Q1HUD = {};
-Q1HUD.Version = "1. 00";
+Q1HUD.Version = "1. 01";
 
 --[[
   METHODS

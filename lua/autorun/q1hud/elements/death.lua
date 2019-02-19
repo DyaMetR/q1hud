@@ -32,7 +32,7 @@ if CLIENT then
         rotation = 1;
       end
 
-      if LocalPlayer():GetRagdollEntity() ~= nil then
+      if IsValid(LocalPlayer():GetRagdollEntity()) and LocalPlayer():GetRagdollEntity() ~= nil then
         LocalPlayer():GetRagdollEntity():SetNoDraw(true);
       end
     else

@@ -11,6 +11,7 @@ if CLIENT then
     Skin = {command = "q1hud_skin", value = "Default"},
 
     Enabled = {command = "q1hud_enabled", value = 1},
+    StatusbarEnabled = {command = "q1hud_statusbar_enabled", value = 1},
     InventoryEnabled = {command = "q1hud_inventory_enabled", value = 0},
     ItemPickupEnabled = {command = "q1hud_pickup_enabled", value = 1},
     DamageEffectEnabled = {command = "q1hud_damage_enabled", value = 1},
@@ -80,6 +81,14 @@ if CLIENT then
   ]]
   function Q1HUD:GetSelectedSkin()
     return self.Config.Skin:GetString();
+  end
+
+  --[[
+    Returns whether the status bar is enabled
+    @return {boolean} enabled
+  ]]
+  function Q1HUD:IsStatusbarEnabled()
+    return self.Config.StatusbarEnabled:GetInt() > 0;
   end
 
   --[[
@@ -245,6 +254,12 @@ if CLIENT then
     -- Composition
     panel:AddControl( "Label" , { Text = ""} );
     panel:AddControl( "Label" , { Text = "Composition"} );
+
+    panel:AddControl( "CheckBox", {
+  		Label = "Statusbar enabled",
+  		Command = "q1hud_statusbar_enabled",
+  		}
+  	);
 
     panel:AddControl( "CheckBox", {
   		Label = "Inventory enabled",

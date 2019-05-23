@@ -57,6 +57,7 @@ if CLIENT then
   ]]
   -- Draw the Scoreboard upon dying! (also make it an option)
   function Q1HUD:DrawMainPanel()
+    if (not Q1HUD:IsStatusbarEnabled()) then return; end
     local backtile = Q1HUD:GetBacktileAlpha();
     local inventory = Q1HUD:IsInventoryEnabled();
     local scale = Q1HUD:GetHUDScale();

@@ -21,6 +21,7 @@ if CLIENT then
   Q1HUD:AddAmmoIcon("Q1Rockets", "rocket", "rockets");
   Q1HUD:AddAmmoIcon("Q1Cells", "cells", "cell");
   Q1HUD:AddAmmoIcon("Q1LavaNails", "nail", "nails");
+  Q1HUD:AddAmmoIcon("Q1Nails", "nail", "nails");
   Q1HUD:AddAmmoIcon("Q1MultiRockets", "rocket", "rockets");
   Q1HUD:AddAmmoIcon("Q1Plasma", "cells", "cell");
 end

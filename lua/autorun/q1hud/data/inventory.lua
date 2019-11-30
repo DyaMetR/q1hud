@@ -6,6 +6,7 @@ if CLIENT then
   -- Selectable HL2 weapons
   Q1HUD:AddSelectableWeapon("weapon_physgun", "Physics gun");
   Q1HUD:AddSelectableWeapon("weapon_physcannon", "Gravity gun");
+  Q1HUD:AddSelectableWeapon("weapon_crowbar", "Crowbar");
   Q1HUD:AddSelectableWeapon("weapon_pistol", "9MM Pistol");
   Q1HUD:AddSelectableWeapon("weapon_357", ".357 Magnum");
   Q1HUD:AddSelectableWeapon("weapon_smg1", "SMG");
@@ -42,7 +43,8 @@ if CLIENT then
   Q1HUD:AddSelectableAmmo("Q1Shells", "Shells");
   Q1HUD:AddSelectableAmmo("Q1Rockets", "Rockets");
   Q1HUD:AddSelectableAmmo("Q1Cells", "Cells");
-  Q1HUD:AddSelectableAmmo("Q1LavaNails", "Nails");
+  Q1HUD:AddSelectableAmmo("Q1LavaNails", "Lava nails");
+  Q1HUD:AddSelectableAmmo("Q1Nails", "Nails");
   Q1HUD:AddSelectableAmmo("Q1MultiRockets", "Multi-rockets");
   Q1HUD:AddSelectableAmmo("Q1Plasma", "Plasma");
 

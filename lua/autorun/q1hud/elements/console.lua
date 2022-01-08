@@ -11,7 +11,7 @@ if CLIENT then
   local SECRET_TIME_MIN, SECRET_TIME_MAX = 0.5, 2;
   local TEXTURE = "console";
   local VER_XOFFSET, VER_YOFFSET = 557, 377;
-  local EASTEREGG_RANDOM = 7;
+  local EASTEREGG_RANDOM = 5;
   local SEQ_WIDTH, SEQ_HEIGHT = 7, 9;
   local SEQ_XOFFSET, SEQ_YOFFSET = 10, 15;
 

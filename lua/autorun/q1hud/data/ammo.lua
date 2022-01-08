@@ -17,11 +17,11 @@ if CLIENT then
   Q1HUD:AddAmmoIcon("Grenade", "grenade", "grenade_ammo");
 
   -- Quake 1 SWEPs ammo
-  Q1HUD:AddAmmoIcon("Q1Shells", "shell", "shells");
-  Q1HUD:AddAmmoIcon("Q1Rockets", "rocket", "rockets");
-  Q1HUD:AddAmmoIcon("Q1Cells", "cells", "cell");
-  Q1HUD:AddAmmoIcon("Q1LavaNails", "nail", "nails");
-  Q1HUD:AddAmmoIcon("Q1Nails", "nail", "nails");
-  Q1HUD:AddAmmoIcon("Q1MultiRockets", "rocket", "rockets");
-  Q1HUD:AddAmmoIcon("Q1Plasma", "cells", "cell");
+  Q1HUD:AddAmmoIcon("quake_shells", "shell", "shells");
+  Q1HUD:AddAmmoIcon("quake_rockets", "rocket", "rockets");
+  Q1HUD:AddAmmoIcon("quake_cells", "cells", "cell");
+  Q1HUD:AddAmmoIcon("quake_lavanails", "lava_nail", "lava");
+  Q1HUD:AddAmmoIcon("quake_nails", "nail", "nails");
+  Q1HUD:AddAmmoIcon("quake_multirockets", "multi_small", "multi");
+  Q1HUD:AddAmmoIcon("quake_plasma", "plasma_ball", "plasma");
 end

@@ -229,7 +229,7 @@ if CLIENT then
 
     -- Style
     panel:AddControl( "Label" , { Text = ""} );
-    panel:AddControl( "Label" , { Text = "Style"} );
+    panel:AddControl( "Label" , { Text = "Appearance"} );
     panel:AddControl( "Slider", {
       Label = "HUD Scale",
       Type = "Float",
@@ -345,10 +345,13 @@ if CLIENT then
     end
 
     -- Credits
-    panel:AddControl( "Label",  { Text = ""});
-  	panel:AddControl( "Label",  { Text = "Credits"});
-    panel:AddControl( "Label",  { Text = "Main script: DyaMetR"});
-    panel:AddControl( "Label",  { Text = "Textures from: id Software and DyaMetR"});
+    panel:Help("Credits");
+    panel:Help("DyaMetR");
+    panel:ControlHelp("Script\nCustom weapon icons\nCustom ammunition icons");
+    panel:Help("id Software");
+    panel:ControlHelp("Original texture work");
+    panel:Help("Version");
+    panel:ControlHelp(Q1HUD.Version);
   end
 
   local function menuCreation()

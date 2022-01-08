@@ -22,18 +22,34 @@ if CLIENT then
     local inventory = Q1HUD:IsInventoryEnabled();
     local offset = self:GetTextureDimensions("0");
 
-    -- If the weapon is invalid or has no ammo, scrap it
-    if (weapon == NULL or weapon:GetPrimaryAmmoType() <= -1 and weapon:GetSecondaryAmmoType() <= -1) then
-      Q1HUD:DrawNumber(0, x + (offset * scale * 3) + (XOFFSET * scale), y, true);
-      return
-    end
-
     local primary = weapon:GetPrimaryAmmoType();
     local secondary = weapon:GetSecondaryAmmoType();
 
-    local clip = math.Clamp(weapon:Clip1(), 0, weapon:Clip1()) or 0;
+    local clip = math.max(weapon:Clip1(), 0);
     local ammo = LocalPlayer():GetAmmoCount(primary) or 0;
     local alt = LocalPlayer():GetAmmoCount(secondary) or 0;
+
+    if weapon.CustomAmmoDisplay then
+      local customAmmo = weapon:CustomAmmoDisplay();
+      if customAmmo then
+        primary = 0;
+        clip = customAmmo.PrimaryClip or 0;
+        ammo = customAmmo.PrimaryAmmo;
+        alt = customAmmo.SecondaryAmmo or 0;
+
+        -- only show one ammunition amount if the reserve is invalid
+        if not ammo then
+          ammo = clip;
+          clip = -1;
+        end
+      end
+    end
+
+    -- If the weapon is invalid or has no ammo, scrap it
+    if (weapon == NULL or (primary <= -1 and secondary <= -1) or (customAmmo and not customAmmo.Draw)) then
+      Q1HUD:DrawNumber(0, x + (offset * scale * 3) + (XOFFSET * scale), y, true);
+      return
+    end
 
     local ammoToShow = primary;
 
@@ -52,7 +68,7 @@ if CLIENT then
       style = 0;
     end
 
-    if (weapon:Clip1() <= -1) then
+    if (clip <= -1) then
       counter1 = ammo;
     else
       if (style == 1) then

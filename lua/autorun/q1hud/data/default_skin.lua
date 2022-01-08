@@ -32,7 +32,7 @@ if CLIENT then
   local characters = {path = surface.GetTextureID("q1hud/default/characters"), u = 128, v = 64};
   local weapon_highlight = {path = surface.GetTextureID("q1hud/default/weapon_highlight"), u = 128, v = 16};
   local console = {path = Material("q1hud/default/console.png"), u = 640, v = 400};
-  local smallAmmo = {path = surface.GetTextureID("q1hud/default/ammo_small"), u = 128, v = 8};
+  local smallAmmo = {path = surface.GetTextureID("q1hud/default/ammo_small"), u = 128, v = 16};
   local ammo = {path = surface.GetTextureID("q1hud/default/ammo"), u = 256, v = 64};
   local weapons = {path = surface.GetTextureID("q1hud/default/weapons"), u = 256, v = 64};
 
@@ -262,6 +262,9 @@ if CLIENT then
   Q1HUD:AddTexture(data, "slam", smallAmmo, 90, 0, 9, 8);
   Q1HUD:AddTexture(data, "ball", smallAmmo, 99, 0, 9, 8);
   Q1HUD:AddTexture(data, "40mm", smallAmmo, 108, 0, 9, 8);
+  Q1HUD:AddTexture(data, "lava_nail", smallAmmo, 0, 8, 9, 8);
+  Q1HUD:AddTexture(data, "multi_small", smallAmmo, 9, 8, 9, 8);
+  Q1HUD:AddTexture(data, "plasma_ball", smallAmmo, 18, 8, 9, 8);
 
   -- Ammunition icons
   Q1HUD:AddTexture(data, "nails", ammo, 0, 0, 24, 24);
@@ -277,6 +280,9 @@ if CLIENT then
   Q1HUD:AddTexture(data, "ball_ammo", ammo, 216, 0, 24, 24);
   Q1HUD:AddTexture(data, "smg_gren_ammo", ammo, 0, 21, 24, 24);
   Q1HUD:AddTexture(data, "slam_ammo", ammo, 24, 21, 24, 24);
+  Q1HUD:AddTexture(data, "lava", ammo, 72, 21, 24, 24);
+  Q1HUD:AddTexture(data, "multi", ammo, 96, 21, 24, 24);
+  Q1HUD:AddTexture(data, "plasma", ammo, 120, 21, 24, 24);
 
   -- Weapon icons
   Q1HUD:AddTexture(data, "crowbar", weapons, 0, 0, 24, 16);
@@ -286,8 +292,8 @@ if CLIENT then
   Q1HUD:AddTexture(data, "ar2", weapons, 96, 0, 24, 16);
   Q1HUD:AddTexture(data, "shotgun", weapons, 120, 0, 24, 16);
   Q1HUD:AddTexture(data, "crossbow", weapons, 144, 0, 24, 16);
-  Q1HUD:AddTexture(data, "grenade", weapons, 168, 0, 24, 16);
-  Q1HUD:AddTexture(data, "slam", weapons, 192, 0, 24, 16);
+  Q1HUD:AddTexture(data, "weapon_frag", weapons, 168, 0, 24, 16);
+  Q1HUD:AddTexture(data, "weapon_slam", weapons, 192, 0, 24, 16);
   Q1HUD:AddTexture(data, "rpg", weapons, 215, 0, 24, 16);
   Q1HUD:AddTexture(data, "toolgun", weapons, 0, 16, 24, 16);
   Q1HUD:AddTexture(data, "camera", weapons, 24, 16, 24, 16);
@@ -300,6 +306,9 @@ if CLIENT then
   Q1HUD:AddTexture(data, "qrocketl", weapons, 192, 16, 24, 16);
   Q1HUD:AddTexture(data, "qsuper", weapons, 215, 16, 24, 16);
   Q1HUD:AddTexture(data, "qlightning", weapons, 0, 32, 24, 16);
+  Q1HUD:AddTexture(data, "qproxlauncher", weapons, 47, 34, 23, 14);
+  Q1HUD:AddTexture(data, "qlaser", weapons, 79, 34, 23, 14);
+  Q1HUD:AddTexture(data, "qhammer", weapons, 110, 34, 23, 14);
 
   Q1HUD:AddSkin(skin, data); -- Add skin
 

@@ -4,6 +4,8 @@
 
 if CLIENT then
 
+  local _color = Color(0, 0, 0)
+
   --[[
     Adds a texture for a skin data table
     @param {table} data
@@ -78,9 +80,28 @@ if CLIENT then
     local file = texture.file;
     local path, u, v = file.path, file.u, file.v;
 
-    surface.SetDrawColor(Color(color.r, color.g, color.b, alpha));
+    -- get sprite boundaries
+    local u0, v0 = a / u, b / v;
+    local u1, v1 = (a + w) / u, (b + h) / v;
+
+    -- half pixel anticorrection
+    local du = 0.5 / u;
+    local dv = 0.5 / v;
+
+    -- apply correction
+    u0, v0 = (u0 - du) / (1 - 2 * du), (v0 - dv) / (1 - 2 * dv);
+    u1, v1 = (u1 - du) / (1 - 2 * du), (v1 - dv) / (1 - 2 * dv);
+
+    -- set colour
+    _color.r = color.r
+    _color.g = color.g
+    _color.b = color.b
+    _color.a = alpha
+
+    -- draw texture
+    surface.SetDrawColor(_color);
     surface.SetTexture(path);
-    surface.DrawTexturedRectUV(x, y, w * scale, h * scale, (a/u), (b/v), (a + w)/u, (b + h)/v);
+    surface.DrawTexturedRectUV(x, y, w * scale, h * scale, u0, v0, u1, v1);
   end
 
 end

@@ -5,7 +5,7 @@
 if CLIENT then
 
   -- Parameters
-  local PING_XOFFSET, PING_YOFFSET = 288, 9; -- Ping meter offset
+  local PING_XOFFSET, PING_YOFFSET = 288, 8; -- Ping meter offset
   local WEAPON_XOFFSET, WEAPON_YOFFSET = 0, 8; -- Weapon icon offset
   local WEAPON_WIDTH, WEAPON_HEIGHT = 24, 12; -- Weapon icon dimensions
   local AMMO_XOFFSET, AMMO_YOFFSET, AMMO_SEPARATION = 42, 1, 42;

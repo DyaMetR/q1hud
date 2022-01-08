@@ -27,6 +27,14 @@ if CLIENT then
   Q1HUD:AddSelectableWeapon("weapon_q1_supernailgun", "Quake's Super Nailgun");
   Q1HUD:AddSelectableWeapon("weapon_q1_supershotgun", "Quake's Super Shotgun");
   Q1HUD:AddSelectableWeapon("weapon_q1_lightninggun", "Quake's Lightning gun");
+  Q1HUD:AddSelectableWeapon("weapon_q1_lavanailgun", "Quake's Lava nail gun");
+  Q1HUD:AddSelectableWeapon("weapon_q1_lavasupernailgun", "Quake's Lava super nail gun");
+  Q1HUD:AddSelectableWeapon("weapon_q1_mjolnir", "Quake's Mjolnir");
+  Q1HUD:AddSelectableWeapon("weapon_q1_plasmagun", "Quake's Plasma gun");
+  Q1HUD:AddSelectableWeapon("weapon_q1_lasercannon", "Quake's Laser cannon");
+  Q1HUD:AddSelectableWeapon("weapon_q1_proxlauncher", "Quake's Proximity launcher");
+  Q1HUD:AddSelectableWeapon("weapon_q1_multirocketlauncher", "Quake's Multi-rocket launcher");
+  Q1HUD:AddSelectableWeapon("weapon_q1_multigrenadelauncher", "Quake's Multi-grenade launcher");
 
   -- Selectable HL2 ammo types
   Q1HUD:AddSelectableAmmo("Pistol", "Pistol ammo");
@@ -40,12 +48,12 @@ if CLIENT then
   Q1HUD:AddSelectableAmmo("slam", "S.L.A.M's");
 
   -- Selectable Quake ammo types
-  Q1HUD:AddSelectableAmmo("Q1Shells", "Shells");
-  Q1HUD:AddSelectableAmmo("Q1Rockets", "Rockets");
-  Q1HUD:AddSelectableAmmo("Q1Cells", "Cells");
-  Q1HUD:AddSelectableAmmo("Q1LavaNails", "Lava nails");
-  Q1HUD:AddSelectableAmmo("Q1Nails", "Nails");
-  Q1HUD:AddSelectableAmmo("Q1MultiRockets", "Multi-rockets");
-  Q1HUD:AddSelectableAmmo("Q1Plasma", "Plasma");
+  Q1HUD:AddSelectableAmmo("quake_shells", "Shells");
+  Q1HUD:AddSelectableAmmo("quake_rockets", "Rockets");
+  Q1HUD:AddSelectableAmmo("quake_cells", "Cells");
+  Q1HUD:AddSelectableAmmo("quake_lavanails", "Lava nails");
+  Q1HUD:AddSelectableAmmo("quake_nails", "Nails");
+  Q1HUD:AddSelectableAmmo("quake_multirockets", "Multi-rockets");
+  Q1HUD:AddSelectableAmmo("quake_plasma", "Plasma");
 
 end

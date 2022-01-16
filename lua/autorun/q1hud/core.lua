@@ -21,6 +21,7 @@ if CLIENT then
 end
 
 -- Utils
+Q1HUD:IncludeFile("util/hooks.lua");
 Q1HUD:IncludeFile("util/config.lua");
 Q1HUD:IncludeFile("util/skins.lua");
 Q1HUD:IncludeFile("util/textures.lua");

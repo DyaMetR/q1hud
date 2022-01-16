@@ -71,16 +71,16 @@ if CLIENT then
   Q1HUD:AddTexture(data, "scoreboard", statusbar, 0, 24, 320, 24);
 
   -- Faces
---  Q1HUD:AddTexture(data, "face_god_inv", faces, 0, 0, 24, 24);
-  --Q1HUD:AddTexture(data, "face_inv", faces, 24, 0, 24, 24);
-  --Q1HUD:AddTexture(data, "face_god0", faces, 48, 0, 24, 24);
-  --Q1HUD:AddTexture(data, "face_god1", faces, 72, 0, 24, 24);
+  Q1HUD:AddTexture(data, "face_god_inv", faces, 0, 0, 24, 24);
+  Q1HUD:AddTexture(data, "face_inv", faces, 24, 0, 24, 24);
+  Q1HUD:AddTexture(data, "face_god0", faces, 48, 0, 24, 24);
+  Q1HUD:AddTexture(data, "face_god1", faces, 72, 0, 24, 24);
+  Q1HUD:AddTexture(data, "face_quad", faces, 216, 0, 24, 24);
   Q1HUD:AddTexture(data, "face0_d", faces, 96, 0, 24, 24);
   Q1HUD:AddTexture(data, "face1_d", faces, 120, 0, 24, 24);
   Q1HUD:AddTexture(data, "face2_d", faces, 144, 0, 24, 24);
   Q1HUD:AddTexture(data, "face3_d", faces, 168, 0, 24, 24);
   Q1HUD:AddTexture(data, "face4_d", faces, 192, 0, 24, 24);
-  --Q1HUD:AddTexture(data, "face_quad", faces, 216, 0, 24, 24);
   Q1HUD:AddTexture(data, "face0", faces, 240, 0, 24, 24);
   Q1HUD:AddTexture(data, "face1", faces, 264, 0, 24, 24);
   Q1HUD:AddTexture(data, "face2", faces, 288, 0, 24, 24);
@@ -91,6 +91,7 @@ if CLIENT then
   Q1HUD:AddTexture(data, "armor0", armors, 0, 0, 24, 24);
   Q1HUD:AddTexture(data, "armor1", armors, 24, 0, 24, 24);
   Q1HUD:AddTexture(data, "armor2", armors, 48, 0, 24, 24);
+  Q1HUD:AddTexture(data, "disc", armors, 72, 0, 24, 24);
 
   -- Inventory
   Q1HUD:AddTexture(data, "inventory", inventory, 0, 0, 320, 24);

@@ -3,7 +3,6 @@
 ]]
 
 if CLIENT then
-  -- HL2 Default weapons
   Q1HUD:AddWeaponIcon("weapon_crowbar", "crowbar");
   Q1HUD:AddWeaponIcon("weapon_pistol", "pistol");
   Q1HUD:AddWeaponIcon("weapon_357", "python");
@@ -18,22 +17,4 @@ if CLIENT then
   Q1HUD:AddWeaponIcon("weapon_physcannon", "physcannon");
   Q1HUD:AddWeaponIcon("weapon_camera", "camera");
   Q1HUD:AddWeaponIcon("weapon_slam", "weapon_slam");
-
-  -- Quake SWEPs
-  Q1HUD:AddWeaponIcon("weapon_q1_grenadelauncher", "qgrenadel");
-  Q1HUD:AddWeaponIcon("weapon_q1_nailgun", "qnailgun");
-  Q1HUD:AddWeaponIcon("weapon_q1_rocketlauncher", "qrocketl");
-  Q1HUD:AddWeaponIcon("weapon_q1_shotgun", "qshotgun");
-  Q1HUD:AddWeaponIcon("weapon_q1_supernailgun", "qsnailgun");
-  Q1HUD:AddWeaponIcon("weapon_q1_supershotgun", "qsuper");
-  Q1HUD:AddWeaponIcon("weapon_q1_lightninggun", "qlightning");
-  Q1HUD:AddWeaponIcon("weapon_q1_lavanailgun", "qnailgun");
-  Q1HUD:AddWeaponIcon("weapon_q1_lavasupernailgun", "qsnailgun");
-  Q1HUD:AddWeaponIcon("weapon_q1_lasercannon", "qlaser");
-  Q1HUD:AddWeaponIcon("weapon_q1_mjolnir", "qhammer");
-  Q1HUD:AddWeaponIcon("weapon_q1_multigrenadelauncher", "qgrenadel");
-  Q1HUD:AddWeaponIcon("weapon_q1_multirocketlauncher", "qrocketl");
-  Q1HUD:AddWeaponIcon("weapon_q1_plasmagun", "qlightning");
-  Q1HUD:AddWeaponIcon("weapon_q1_proxlauncher", "qproxlauncher");
-
 end

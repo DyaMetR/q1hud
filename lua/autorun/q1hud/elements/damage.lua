@@ -2,39 +2,37 @@
   DAMAGE EFFECT
 ]]
 
+local NET = "q1hud_damage"
+
 if CLIENT then
 
   -- Parameters
-  local HEALTH_COLOR = Color(255, 0, 0);
-  local ARMOR_COLOR = Color(255,220,200);
-
-  -- Variable
-  local lastHP = 100;
-  local lastAP = 0;
-
-  function Q1HUD:DamageEffect()
-    if (not Q1HUD:IsDamageEffectEnabled()) then return end;
-    local hp = LocalPlayer():Health(); -- Health
-    local ap = LocalPlayer():Armor(); -- Armor
-
-    -- If health is affected
-    if (lastHP ~= hp) then
-      if (lastHP > hp) then
-        if (ap > 0) then
-          self:FlashScreen(ARMOR_COLOR);
-        else
-          self:FlashScreen(HEALTH_COLOR);
-        end
-      end
-      lastHP = hp;
-    end
-  end
+  local HEALTH_COLOR = Color( 255, 0, 0 );
+  local ARMOR_COLOR = Color( 255, 220, 200 );
 
   --[[
-    Think hook
+    Receive damage effect
   ]]
-  hook.Add("Think", "q1hud_damage_think", function()
-    Q1HUD:DamageEffect();
+  net.Receive(NET, function(len)
+    local color = HEALTH_COLOR;
+    if (LocalPlayer():Armor() > 0) then color = ARMOR_COLOR; end
+    Q1HUD:FlashScreen(color);
+    Q1HUD:ShowDamageFace(); -- trigger damage face animation on the status bar
+  end);
+
+end
+
+if SERVER then
+
+  util.AddNetworkString(NET);
+
+  --[[
+    Damage receive hook
+  ]]
+  hook.Add("EntityTakeDamage", "q1hud_damage", function(_player, info)
+    if (not _player:IsPlayer() and info:GetDamage() > 0) then return end
+    net.Start(NET);
+    net.Send(_player);
   end);
 
 end

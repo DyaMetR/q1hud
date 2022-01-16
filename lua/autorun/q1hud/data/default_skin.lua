@@ -282,8 +282,8 @@ if CLIENT then
   Q1HUD:AddTexture(data, "smg_gren_ammo", ammo, 0, 21, 24, 24);
   Q1HUD:AddTexture(data, "slam_ammo", ammo, 24, 21, 24, 24);
   Q1HUD:AddTexture(data, "lava", ammo, 72, 21, 24, 24);
-  Q1HUD:AddTexture(data, "multi", ammo, 96, 21, 24, 24);
-  Q1HUD:AddTexture(data, "plasma", ammo, 120, 21, 24, 24);
+  Q1HUD:AddTexture(data, "multi", ammo, 120, 21, 24, 24);
+  Q1HUD:AddTexture(data, "plasma", ammo, 96, 21, 24, 24);
 
   -- Weapon icons
   Q1HUD:AddTexture(data, "crowbar", weapons, 0, 0, 24, 16);

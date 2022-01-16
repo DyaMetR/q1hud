@@ -30,7 +30,7 @@ if SERVER then
     Damage receive hook
   ]]
   hook.Add("EntityTakeDamage", "q1hud_damage", function(_player, info)
-    if (not _player:IsPlayer() and info:GetDamage() > 0) then return end
+    if (not _player:IsPlayer() or info:GetDamage() <= 0) then return end
     net.Start(NET);
     net.Send(_player);
   end);

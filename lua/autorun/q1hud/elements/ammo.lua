@@ -8,6 +8,7 @@ if CLIENT then
   local XOFFSET, YOFFSET = 24, 24;
   local SMALL_NUMBER_HEIGHT = 10;
   local XOFFSET_ALT, YOFFSET_ALT = 2, 2;
+  local ZERO_SPRITE = "0";
 
   --[[
     Draws the ammo panel for a weapon, with the given icon for the ammo type
@@ -20,7 +21,13 @@ if CLIENT then
     local scale = Q1HUD:GetHUDScale();
     local style = Q1HUD:GetAmmoStyle();
     local inventory = Q1HUD:IsInventoryEnabled();
-    local offset = self:GetTextureDimensions("0");
+    local offset = self:GetTextureDimensions(ZERO_SPRITE);
+
+    -- if there's no valid weapon, draw a zero
+    if (not IsValid(weapon)) then
+      Q1HUD:DrawNumber(0, x + (offset * scale * 3) + (XOFFSET * scale), y, true);
+      return;
+    end
 
     local primary = weapon:GetPrimaryAmmoType();
     local secondary = weapon:GetSecondaryAmmoType();
@@ -45,8 +52,8 @@ if CLIENT then
       end
     end
 
-    -- If the weapon is invalid or has no ammo, scrap it
-    if (weapon == NULL or (primary <= -1 and secondary <= -1) or (customAmmo and not customAmmo.Draw)) then
+    -- if ammunition is not valid, draw a zero
+    if ((primary <= -1 and secondary <= -1) or (customAmmo and not customAmmo.Draw)) then
       Q1HUD:DrawNumber(0, x + (offset * scale * 3) + (XOFFSET * scale), y, true);
       return
     end

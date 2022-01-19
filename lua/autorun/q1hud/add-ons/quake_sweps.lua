@@ -76,12 +76,14 @@ if CLIENT then
         if (powerups and hasPowerup(powerups.Pentagram)) then
           return DISC;
         else
-          if (ap > 150) then
-            return ARMOR2;
-          elseif (ap <= 150 and ap > 100) then
-            return ARMOR1;
-          elseif (ap <= 100 and ap > 0) then
+          local armor = LocalPlayer().AType;
+          if (not armor or ap <= 0) then return; end
+          if (armor == .3) then
             return ARMOR0;
+          elseif (armor == .6) then
+            return ARMOR1;
+          else
+            return ARMOR2;
           end
         end
       end);
